@@ -10,6 +10,7 @@ namespace LinQProblems
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
