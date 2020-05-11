@@ -26,13 +26,27 @@ namespace LinQProblems
             ShortenWord();
         }
 
-        public void WordsThatStartWithTh(List<string> names)
+        public void WordsThatStartWithTh(List<string> wordString)
         {
+            var words = wordString;
+            var thWords = words.Where(w => w.Contains("th")); //w represents the words(strings objects) in the list wordString.
+            foreach (var word in thWords)
+            {
+                Console.WriteLine(word);
+            }
+            Console.ReadLine();
 
         }
 
         public void RemoveDuplicates(List<string> names)
         {
+            var words = names;
+            var removedWords = words.Distinct();
+            foreach (var word in removedWords)
+            {
+                Console.WriteLine(word);
+            }
+            Console.ReadLine();
 
         }
 
