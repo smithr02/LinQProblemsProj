@@ -107,12 +107,22 @@ namespace LinQProblems
             Console.ReadLine();
         }
 
-    }
-
-    public void ShortenWord()
+        public void ShortenWord()
         {
-
+            Console.WriteLine("Enter word");
+            string name = Console.ReadLine().ToUpper();
+            var condensedName = name.OrderBy(n => n).GroupBy(n => n).Select(n => n);
+            foreach (var characterCount in condensedName)
+            {
+                Console.WriteLine("" + characterCount.Key + characterCount.Count());
+            }
+            Console.ReadLine();
         }
 
     }
+
 }
+
+
+    
+
